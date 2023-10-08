@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .Main{
+            height: 300px;
+            width: 300px;
+            background-color: green;
+            margin: auto;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        .Main::before{
+            content: "";
+            position: absolute;
+            height: 20%;
+            width: 50%;
+            background-color: red;
+            left: -50%;
+            top: 30%;
+            transition: .34s;
+        }
+        .Main::after{
+            content: "";
+            position: absolute;
+            height: 20%;
+            width: 50%;
+            background-color: yellow;
+            right: -50%;
+            top: 30%;
+            transition: .34s;
+        }
+        .Main:hover.Main::before {
+            left: 0;
+        }
+        .Main:hover.Main::after {
+            right: 0;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    
+    <div class="Main">
+        
+    </div>
+
+
+</body>
+</html>
